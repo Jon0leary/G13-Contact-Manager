@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Press+Start+2P&display=swap');
+
+body
+{
+    background-image: url("https://img.freepik.com/free-vector/zigzag-lines-pattern-black-background_1017-37483.jpg");
+    background-color: #ffffff;
+    color: #ffffff;
+    background-size: cover;
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+}
+
+h1
+{
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.header
+{
+    font-size: 30px;
+}
+
+.tab-bar
+{
+    overflow: hidden;
+    border:1px solid #ffffff;
+    background-color: #f1f1f1;
+}
+
+.tab-bar button:hover
+{
+    background-color: #ddd;
+}
+
+.tab-bar button.active
+{
+    background-color: #ccc;
+}
+
+.tab-content
+{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #ccc;
+}
+
+.cms-table-container
+{
+    font-size: 35px;
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.cms-table-row
+{
+    display: flex;
+}
+
+.cms-table-column
+{
+    background-color:#3a3a3a;
+    margin: 5px;
+    padding: 10px 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cms-name
+{
+    flex-basis: 20%;
+}
+
+.cms-phone
+{
+    flex-basis: 20%;
+}
+
+.cms-header
+{
+    background-color:#424242;
+    font-weight: bolder;
+}
+
+.cms-edit, .cms-delete, .cms-add-entry-column
+{
+    flex-basis: 5%;
+    text-align: center;
+    cursor: pointer;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <!-- HEAD -->
+    <head>
+        <!-- Title that shows up in the header -->
+        <title>COP 4331 small Project</title>
+        <!-- Call to the md5.js file -->
+        <script type = "text/javascript" src = "js/md5.js"></script>
+        <!-- Call to the code.js file -->
+        <script type = "text/javascript" src = "js/code.js"></script>
+        
+        <!-- Call to the styles2 file -->
+        <link href ="css/styles2.css" rel="stylesheet">
+        <link href ="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        
+        <!-- Adds a cookie to the page -->
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() 
+            {
+                readCookie();
+            }, false);
+        </script>
+    </head>
+
+    <!-- BODY -->
+    <body>
+        <!-- A fancy header to make it look better -->
+        <h1> G13 Contact Manager </h1>
+        <!-- The Logged in as Status-->
+        <div class="header">
+            <span id="userName"></span><br />
+        </div>
+            
+        <!-- The Tabs -->
+        <div class="tab-bar">
+            <button class="tab-buttons" onclick="openTab('Home')">Home</button>
+            <button class="tab-buttons" onclick="openTab('Contacts')">Add Contacts</button>
+            <button class="tab-buttons" onclick="openTab('About')">About</button>
+            <button class="tab-buttons" onclick="doLogout()">Log Out</button> 
+        </div>
+
+        <!-- Home tab contents -->
+        <div id="Home" class="tab-content">
+
+            <!-- Home Tab Search Bar -->
+            <div class = "Search Bar">
+                <input type = "text" id ="nameText" class="input-field" placeholder="search" required>
+                <button type = "button" id="searchContactButton" class = "buttons" onclick="ContactSearch();">Search</button>
+                <span id="ContactSearchResult"></span>
+            </div>
+
+            <!-- Home Tab Contact List -->
+            <div class = "ContactList">
+                <!-- Names In The Contact List -->
+                <div class = "names">   
+                    <!-- The Container that will keep all the names -->
+                    <div class = "cms-table-container">
+                        <!-- The Headers that the names will appear under-->
+                        <div class = "cms-table-row">
+
+                            <!-- The Name, Phone and Email-->
+                            <div class = "cms-table-column name-header">Name</div>
+                            <div class = "cms-table-column phone-header">Phone</div>
+                            <div class = "cms-table-column Email-header">Email</div>
+
+                        </div>
+                        <span id = "tableBody"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Contacts" class="tab-content" style="display:none">
+            <div id="newContact">
+                <span id="ContactCreateResult"></span><br />
+                <input type = "text" id="nameCreateText" class="rg-input-field" placeholder="Name" required><br />
+                <input type = "text" id="phoneCreateText" class="rg-input-field" placeholder="Phone number" required><br />
+                <input type = "text" id="emailCreateText" class="rg-input-field" placeholder="email" required><br />
+                <button type = "button" id="createButton" class = "buttons" onclick="ContactCreate();">create contact</button>
+            </div>
+        </div>
+
+        <div id="About" class="tab-content" style="display:none">
+                <p>Test2</p>
+        </div>
+
+        <script>
+            function openTab(tabName)
+            {
+                var i;
+                var x = document.getElementsByClassName("tab-content");
+                for (i = 0; i < x.length; i++)
+                {
+                    x[i].style.display = "none";
+                }
+                document.getElementById(tabName).style.display = "block";
+            }
+        </script>
+    </body>
+</html>
